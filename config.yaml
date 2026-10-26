@@ -1,0 +1,59 @@
+# Image Analyzer - Configuration
+# Copy this to config.local.yaml for your own settings (gitignored)
+
+# Image source directories to scan
+image_dirs:
+  - ~/Pictures
+  # - /mnt/photos/camera
+  # - /mnt/photos/phone
+
+# Supported file extensions
+extensions:
+  - .jpg
+  - .jpeg
+  - .png
+  - .tiff
+  - .webp
+  - .heic
+
+# Database
+database:
+  path: data/image_analyzer.db
+
+# Pipeline stages - enable/disable individually
+pipeline:
+  exif: true
+  yolo: true
+  faces: true
+  llm: true
+
+# YOLO settings
+yolo:
+  model: yolov8m.pt          # n/s/m/l/x - medium is good balance
+  confidence: 0.35
+  device: 0                   # 0 = first GPU, "cpu" for CPU
+
+# Face recognition (InsightFace)
+faces:
+  reference_dir: data/faces   # Subdirectory per person: data/faces/Name/*.jpg
+
+  similarity_threshold: 0.45  # Lower = stricter matching
+  model: buffalo_l
+
+# LLM description (Ollama API)
+llm:
+  api_url: http://localhost:1234/v1/chat/completions
+  model: qwen2.5-vl:7b       # or minicpm-v, llava:13b
+  prompt: >
+    Describe this image in detail. Include: the setting/location,
+    people and their activities, notable objects, mood/atmosphere,
+    and weather/lighting if outdoors. Be concise but thorough.
+    Respond in Finnish.
+  timeout: 120                # seconds per image
+  max_retries: 2
+
+# Processing
+processing:
+  batch_size: 10              # Images per progress update
+  skip_existing: true         # Skip already-processed images
+  max_workers: 2              # Parallel EXIF/file reads

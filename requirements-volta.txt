@@ -1,0 +1,34 @@
+# -----------------------------------------------------------------------
+# Linssi v0.2 — requirements-volta.txt  (Volta+ GPUs: RTX series, sm_70+)
+#
+# Usage:
+#   pip install -r requirements-volta.txt    # Volta+ / sm_70+
+#   pip install -r requirements.txt          # Pascal / sm_61 (GTX 1080 Ti)
+#
+# After either: python install_face_deps.py
+# -----------------------------------------------------------------------
+
+--extra-index-url https://download.pytorch.org/whl/cu121
+
+# PyTorch — latest cu121, supports sm_70+ (Volta/Turing/Ampere/Ada)
+torch>=2.2.0
+torchvision>=0.17.0
+
+# Core
+numpy>=1.24
+Pillow>=10.0
+requests>=2.31
+pyyaml>=6.0
+tqdm>=4.65
+
+# Computer vision
+opencv-python>=4.8
+ultralytics>=8.0          # YOLOv8
+
+# GUI
+PyQt6>=6.5
+
+# -----------------------------------------------------------------------
+# Face recognition backend — installed by  python install_face_deps.py
+# (auto-detects GPU compute capability via nvidia-smi)
+# -----------------------------------------------------------------------

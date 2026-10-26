@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-base: #1e1e2e;
+  --bg-mantle: #181825;
+  --bg-crust: #11111b;
+  --bg-surface0: #313244;
+  --bg-surface1: #45475a;
+  --bg-surface2: #585b70;
+  --accent: #89b4fa;
+  --accent-hover: #74c7ec;
+  --text: #cdd6f4;
+  --subtext: #a6adc8;
+  --red: #f38ba8;
+  --green: #a6e3a1;
+  --yellow: #f9e2af;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+input, select, textarea {
+  background-color: var(--bg-surface0);
+  color: var(--text);
+  border: 1px solid var(--bg-surface1);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 13px;
+  width: 100%;
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent);
+}
+
+button {
+  background-color: var(--bg-surface0);
+  color: var(--text);
+  border: 1px solid var(--bg-surface1);
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+button:hover {
+  background-color: var(--bg-surface1);
+}
+
+button.primary {
+  background-color: var(--accent);
+  color: var(--bg-base);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+
+button.primary:hover {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-mantle);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-surface1);
+  border-radius: 3px;
+}

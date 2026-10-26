@@ -1,0 +1,30 @@
+[project]
+name = "linssi"
+version = "0.2.0"
+description = "Local-first photo indexer: EXIF, YOLO object detection, face recognition, LLM descriptions"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+
+dependencies = [
+    "Pillow>=10.0",
+    "ultralytics>=8.0",
+    "opencv-python>=4.8",
+    "numpy>=1.24",
+    "requests>=2.31",
+    "pyyaml>=6.0",
+    "tqdm>=4.65",
+]
+
+[project.optional-dependencies]
+gui = ["PyQt6>=6.5"]
+dev = ["pytest>=7.0", "ruff>=0.1"]
+face-cuda12 = ["facenet-pytorch>=0.5.0"]
+face-cuda11 = ["onnxruntime-gpu==1.16.3", "insightface>=0.7"]
+face-cpu    = ["onnxruntime>=1.16", "insightface>=0.7"]
+
+[project.scripts]
+linssi = "src.main:main"
+
+[tool.ruff]
+line-length = 100

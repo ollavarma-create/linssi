@@ -1,0 +1,11 @@
+# config.yaml LLM-osio päivitettynä LM Studiolle:
+
+llm:
+  api_url: http://localhost:1234/v1/chat/completions
+  model: qwen2.5-vl-7b           # Multimodal malli LM Studiossa
+  prompt: >
+    Describe this image in detail. Include the setting,
+    people and activities, notable objects, and mood.
+    Be concise but thorough. Respond in Finnish.
+  timeout: 120
+  max_retries: 2

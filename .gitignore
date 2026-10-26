@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+.venv-face/
+venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Linssi — local data (never commit)
+data/
+backup/
+
+# YOLO weights (large binary, download separately)
+*.pt
+*.onnx
+
+# Local config overrides
+config.local.yaml
+.venv-face-config
+
+# Errors / debug screenshots
+errors/
+
+# OS
+.DS_Store
+Thumbs.db
+
+CLAUDE.md

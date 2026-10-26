@@ -1,0 +1,18 @@
+[project]
+name = "linssiviewer"
+version = "0.1.0"
+description = "Local-first photo index viewer for Linssi 0.2.0"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.12"
+dependencies = [
+    "PySide6>=6.5",
+    "Pillow>=10.0",
+    "PyYAML>=6.0",
+]
+
+[project.scripts]
+linssiviewer = "src.main:main"
+
+[tool.ruff]
+line-length = 100
