@@ -4,10 +4,10 @@ Browser-based viewer for Linssi ML pipeline image databases. Replaces the PySide
 
 ## Related projects
 
-- **[Linssi](https://codeberg.org/hiltsu/linssi)** — the main ML pipeline that creates the database. Requires a CUDA-capable GPU. Run this first to analyse your images and produce the `image_analyzer.db` file that Linssi Web reads.
-- **[LinssiViewer](https://codeberg.org/hiltsu/linssiviewer)** — lightweight PySide6 desktop viewer for the same database, CPU-only, no web server needed.
+- **[Linssi](https://github.com/ollavarma-create/linssi/tree/main)** — the main ML pipeline that creates the database. Requires a CUDA-capable GPU. Run this first to analyse your images and produce the `image_analyzer.db` file that Linssi Web reads.
+- **[LinssiViewer](https://github.com/ollavarma-create/linssi/tree/main/linssiviewer)** — lightweight PySide6 desktop viewer for the same database, CPU-only, no web server needed.
 
-> **Note:** Linssi Web is a read-only viewer. The database must be created with [Linssi](https://codeberg.org/hiltsu/linssi) before this application can be used.
+> **Note:** Linssi Web is a read-only viewer. The database must be created with [Linssi](https://github.com/ollavarma-create/linssi/tree/main) before this application can be used.
 
 ![Audi](samples/audi.png)
 
@@ -175,16 +175,11 @@ sudo systemctl start linssi-web.service
 - [ ] Multiple database support — select which database to view (e.g. personal photos, genealogy photos)
 - [ ] Graceful error handling for missing/inaccessible image files (return placeholder instead of 500)
 
-## Contributors
-
-- **Jari Hiltunen** ([hiltsu](https://codeberg.org/hiltsu)) — author
-- **Claude** (Anthropic) — code generation and deployment assistance
-
 ## License
 
 MIT License — see [LICENSE](LICENSE)
 
-© 2026 Jari Hiltunen, Codeberg: [hiltsu](https://codeberg.org/hiltsu)
+© 2026 Jari Hiltunen
 
 ![Cows](samples/cow.png)
 

@@ -4,6 +4,8 @@ Local-first photo collection indexer. Scans your image directories and builds a
 searchable SQLite database using EXIF metadata, YOLO object detection, face
 recognition, and multimodal LLM descriptions — all running on your own GPU.
 
+![Donald Trump and Mug search](samples/donald_trump_mug.png)
+
 ---
 
 ## Repository Overview
@@ -31,6 +33,10 @@ The viewer and web frontend are read-only; they do not modify the database.
 | **faces** | Identifies known people via face recognition; reference photos in `data/faces/<Name>/` |
 | **llm** | Generates natural-language descriptions via a local multimodal model (LM Studio) |
 | **gui** | Qt6 three-panel browser with settings dialog: filter → thumbnail grid → detail view |
+
+
+![Birds](samples/linnut.png)
+![GEO Location of the image](samples/mapping.png)
 
 ---
 
@@ -62,7 +68,7 @@ The viewer and web frontend are read-only; they do not modify the database.
 
 ```bash
 # 1. Clone
-git clone https://codeberg.org/hiltsu/linssi.git
+git clone https://github.com/ollavarma-create/linssi.git
 cd linssi
 
 # 2. Run the hardware-aware installer (detects GPU, creates venvs, installs deps). Wait for finish.

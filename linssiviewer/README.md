@@ -2,8 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-Read-only photo browser for [Linssi](https://codeberg.org/hiltsu/linssi) SQLite databases.
-Browse, search and inspect image metadata without any ML dependencies.
+Read-only photo browser for [Linssi](https://github.com/ollavarma-create/linssi/tree/main) SQLite databases. Browse, search and inspect image metadata without any ML dependencies.
 
 ## Features
 
