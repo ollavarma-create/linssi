@@ -11,7 +11,7 @@
 --extra-index-url https://download.pytorch.org/whl/cu121
 
 # PyTorch — latest cu121, supports sm_70+ (Volta/Turing/Ampere/Ada)
-torch>=2.2.0
+torch>=2.13.0
 torchvision>=0.17.0
 
 # Core
